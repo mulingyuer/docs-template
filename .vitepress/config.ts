@@ -16,7 +16,7 @@ export default defineConfig({
 	themeConfig,
 	/* 语言配置 */
 	locales: {
-		root: { label: "简体中文", lang: "zh-CN", link: "/zh/", ...zhLocal },
+		root: { label: "简体中文", lang: "zh-CN", ...zhLocal },
 		en: { label: "English", lang: "en-US", link: "/en/", ...enLocal }
 	},
 	vite: viteConfig
