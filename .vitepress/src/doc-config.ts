@@ -1,7 +1,7 @@
 /*
  * @Author: mulingyuer
  * @Date: 2025-06-13 10:12:51
- * @LastEditTime: 2025-06-17 10:44:12
+ * @LastEditTime: 2025-06-17 11:00:59
  * @LastEditors: mulingyuer
  * @Description: 文档配置
  * @FilePath: \docs-template\.vitepress\src\doc-config.ts
@@ -15,7 +15,7 @@ export const docConfig: UserConfig = {
 	/** 网站描述 */
 	description: "这是一个基于 VitePress 的文档模板",
 	/** 路由前缀 */
-	base: "/docs/",
+	base: "/docs-template/",
 	/** 输出路径 */
 	outDir: "dist",
 	/** 相对于项目根目录的 markdown 文件所在的文件夹 */
