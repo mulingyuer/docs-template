@@ -1,0 +1,81 @@
+:root {
+	// --vp-c-brand-1: #48b8a2;
+	// --vp-c-brand-2: #6fd4c0;
+	// --vp-c-brand-3: #4dd3b9;
+
+	// --vp-home-hero-name-background: -webkit-linear-gradient(0deg, #57ceb6 30%, #8be76f);
+	// --vp-home-hero-image-background-image: radial-gradient(
+	// 	circle,
+	// 	#5adeca 15%,
+	// 	#c6ffb4 30%,
+	// 	#fff 50%
+	// );
+
+	--vp-medium-zoom-overlay: rgba(25, 18, 25, 0.9);
+
+	/* 大小 */
+	--vp-layout-max-width: 1600px;
+	--vp-sidebar-width: 310px;
+}
+.dark:root {
+	// --vp-c-brand-1: #48b8a2;
+	// --vp-c-brand-2: #6fd4c0;
+	// --vp-c-brand-3: #4dd3b9;
+
+	// --vp-home-hero-name-background: -webkit-linear-gradient(0deg, #57ceb6 30%, #8be76f);
+	// --vp-home-hero-image-background-image: radial-gradient(
+	// 	circle,
+	// 	#5adeca 15%,
+	// 	#c6ffb4 30%,
+	// 	#000 50%
+	// );
+}
+
+@media (min-width: 960px) {
+	.image-src {
+		max-width: 632px !important;
+		max-height: 422px !important;
+		width: 352px;
+	}
+}
+
+// 顶栏
+@media (min-width: 1440px) {
+	.VPNavBar.has-sidebar .container > .title {
+		padding-left: 32px !important;
+		width: 310px !important;
+	}
+	.VPNavBar.has-sidebar .content {
+		padding-left: calc(310px + 32px) !important;
+	}
+	.VPNavBar.has-sidebar .divider {
+		padding-left: calc(310px + 32px) !important;
+	}
+}
+
+// 顶栏搜索
+@media (min-width: 960px) {
+	.VPNavBarSearch {
+		padding-left: 16px !important;
+	}
+}
+
+// 侧边栏导航
+@media (min-width: 1440px) {
+	.VPSidebar {
+		padding-left: 32px !important;
+		width: 310px !important;
+	}
+}
+
+// 主体内容
+@media (min-width: 1440px) {
+	.VPContent.has-sidebar {
+		padding-left: 310px !important;
+		padding-right: 0px !important;
+	}
+}
+
+.VPDoc.has-aside .content-container {
+	max-width: 1120px !important;
+}
