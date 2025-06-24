@@ -53,6 +53,12 @@
 	}
 }
 
+@media (min-width: 960px) {
+	.VPNavBar .container {
+		max-width: 100%;
+	}
+}
+
 // 顶栏搜索
 @media (min-width: 960px) {
 	.VPNavBarSearch {
@@ -76,6 +82,6 @@
 	}
 }
 
-.VPDoc.has-aside .content-container {
+.VPDoc .content-container {
 	max-width: 1120px !important;
 }
