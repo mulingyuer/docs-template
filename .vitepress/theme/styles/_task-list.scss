@@ -1,0 +1,62 @@
+/* 任务列表容器 */
+.vp-doc .task-list-item {
+	list-style-type: none;
+	display: flex;
+	align-items: flex-start;
+	margin-left: -1.5rem; /* 抵消默认的 padding，使复选框与文字对齐 */
+}
+
+/* 隐藏默认的复选框外观，使用自定义样式 */
+.vp-doc .task-list-item input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+
+	width: 1.1rem;
+	height: 1.1rem;
+	margin-top: 0.25rem;
+	margin-right: 0.6rem;
+
+	border: 1px solid var(--vp-c-divider);
+	border-radius: 4px;
+	background-color: var(--vp-c-bg-soft);
+	cursor: default;
+	position: relative;
+	transition: all 0.2s ease;
+	flex-shrink: 0;
+}
+
+/* 选中状态的背景颜色 - 使用 VitePress 主题变量 */
+.vp-doc .task-list-item input[type="checkbox"]:checked {
+	background-color: var(--vp-c-brand-1);
+	border-color: var(--vp-c-brand-1);
+}
+
+/* 绘制选中状态的勾号 (L 形状) */
+.vp-doc .task-list-item input[type="checkbox"]:checked::after {
+	content: "";
+	position: absolute;
+	left: 5px;
+	top: 2px;
+	width: 5px;
+	height: 9px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+/* 深色模式下勾号的颜色调整（如果品牌色较浅，可以改为深色） */
+.dark .vp-doc .task-list-item input[type="checkbox"]:checked::after {
+	border-color: var(--vp-c-bg);
+}
+
+/* 已完成任务的文字样式（可选：变灰、加删除线） */
+.vp-doc .task-list-item:has(input:checked) {
+	color: var(--vp-c-text-2);
+	text-decoration: line-through;
+	text-decoration-color: var(--vp-c-divider);
+}
+
+/* 移除原生列表的内边距 */
+.vp-doc ul.task-list {
+	padding-left: 1.5rem;
+}

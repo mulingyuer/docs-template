@@ -1,0 +1,12 @@
+/* 让缩放后的图片在最上层 */
+.medium-zoom-overlay {
+	z-index: 90;
+}
+
+.medium-zoom-image--opened {
+	z-index: 91;
+}
+
+.medium-zoom-overlay {
+	background: var(--medium-zoom-bg) !important;
+}

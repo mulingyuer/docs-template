@@ -1,10 +1,10 @@
 <!--
  * @Author: mulingyuer
- * @Date: 2025-06-13 17:52:42
- * @LastEditTime: 2025-06-13 18:30:00
+ * @Date: 2026-03-24 16:31:35
+ * @LastEditTime: 2026-03-24 16:46:07
  * @LastEditors: mulingyuer
- * @Description: 包装布局组件
- * @FilePath: \sprite-docs\.vitepress\theme\MyLayout.vue
+ * @Description: 布局组件
+ * @FilePath: \docs-template\.vitepress\theme\components\Layout.vue
  * 怎么可能会有bug！！！
 -->
 <template>
@@ -13,18 +13,18 @@
 
 <script setup lang="ts">
 import DefaultTheme from "vitepress/theme";
-import { useRoute } from "vitepress";
 import mediumZoom from "medium-zoom";
+import { useRoute } from "vitepress";
 import { nextTick, onMounted, watch } from "vue";
 
-const { Layout } = DefaultTheme;
 const route = useRoute();
+
+const { Layout } = DefaultTheme;
 
 // medium-zoom
 function initZoom() {
-	mediumZoom(".main img", { background: "var(--vp-medium-zoom-overlay)" });
+	mediumZoom(".vp-doc img:not(.no-zoom)", { background: "var(--vp-c-bg)" });
 }
-
 onMounted(() => {
 	initZoom();
 });
@@ -34,4 +34,4 @@ watch(
 );
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

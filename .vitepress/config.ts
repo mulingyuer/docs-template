@@ -1,23 +1,37 @@
 import { defineConfig } from "vitepress";
-import { docConfig } from "./src/doc-config";
-import { head } from "./src/head";
-import { themeConfig } from "./src/theme-config";
-import { zhLocal } from "./src/locales/zh";
-import { enLocal } from "./src/locales/en";
-import { viteConfig } from "./src/vite";
+import { markdown } from "./config/markdown";
+import { themeConfig } from "./config/themeConfig";
+import { head } from "./config/head";
+import { viteConfig } from "./config/vite";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-	/* 文档配置 */
-	...docConfig,
-	/* 标头配置 */
-	head,
-	/* 主题配置 */
+	/** lang */
+	lang: "zh-CN",
+	/** 路由前缀 */
+	base: "/docs-template",
+	/** 网站标题 */
+	title: "文档模板",
+	/** 网站描述 */
+	description: "这是一个基于 VitePress 的文档模板",
+	/** 相对于项目根目录的 markdown 文件所在的文件夹 */
+	srcDir: "src",
+	/** 输出路径 */
+	outDir: "dist",
+	/** 从 URL 中删除 `.html` 后缀 */
+	cleanUrls: true,
+	/** 显示页面最后更新时间（基于 Git 提交时间） */
+	lastUpdated: true,
+	/** Markdown 配置 */
+	markdown,
+	/** 主题配置 */
 	themeConfig,
-	/* 语言配置 */
-	locales: {
-		root: { label: "简体中文", lang: "zh-CN", ...zhLocal },
-		en: { label: "English", lang: "en-US", link: "/en/", ...enLocal }
-	},
-	vite: viteConfig
+	/** HTML `<head>` 配置 */
+	head,
+	/** Vite 配置 */
+	vite: viteConfig,
+	/** 站点地图 */
+	sitemap: {
+		hostname: "https://xxx.xxx.com/docs-template"
+	}
 });

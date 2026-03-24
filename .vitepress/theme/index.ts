@@ -1,23 +1,18 @@
 /*
  * @Author: mulingyuer
- * @Date: 2025-06-13 17:50:24
- * @LastEditTime: 2025-06-13 17:58:36
+ * @Date: 2026-03-24 16:31:35
+ * @LastEditTime: 2026-03-24 16:46:27
  * @LastEditors: mulingyuer
- * @Description: 自定义主题
- * @FilePath: \sprite-docs\.vitepress\theme\index.ts
+ * @Description: 主题配置
+ * @FilePath: \docs-template\.vitepress\theme\index.ts
  * 怎么可能会有bug！！！
  */
 import DefaultTheme from "vitepress/theme";
-import type { Theme } from "vitepress";
-import MyLayout from "./MyLayout.vue";
-// 引入样式
-import "./styles/medium-zoom.scss";
-import "./styles/style.scss";
-import "./styles/custom.scss";
+import Layout from "./components/Layout.vue";
 
-const theme: Theme = {
-	extends: DefaultTheme,
-	Layout: MyLayout
+import "./styles/index.scss";
+
+export default {
+	...DefaultTheme,
+	Layout
 };
-
-export default theme;
